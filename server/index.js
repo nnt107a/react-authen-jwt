@@ -85,6 +85,10 @@ app.get('/protected/user', authenticateToken, (req, res) => {
   // return demo user info
   res.json(demoUser)
 })
+// health endpoint for hosting platforms
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' })
+})
 // Serve client in production (optional)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', 'dist')))

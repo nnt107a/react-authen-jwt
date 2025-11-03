@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"node server/index.js\" \"vite\"",
+    "start": "node server/index.js",
     "start:client": "vite",
     "start:server": "node server/index.js",
     "build": "vite build",
